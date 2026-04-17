@@ -5,6 +5,10 @@
   "type": "module",
   "main": "dist/cli.js",
   "bin": "svg-viewer ./bin/svg-viewer.js",
+  "files": [
+    "dist",
+    "bin"
+  ],
   "repository": "git@github.com:silvio-cavalcanti/svg-viewer.git",
   "scripts": {
     "build": "tsc",
@@ -19,7 +23,7 @@
     "browser",
     "viewer"
   ],
-  "author": "Silvio Bonfim",
+  "author": "Silvio Cavalcanti",
   "license": "MIT",
   "bugs": "https://github.com/silvio-cavalcanti/svg-viewer/issues",
   "homepage": "https://github.com/silvio-cavalcanti/svg-viewer#readme",
