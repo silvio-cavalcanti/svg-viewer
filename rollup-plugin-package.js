@@ -35,6 +35,7 @@ export function packageOptimizer(options = {}) {
         repository: rootPkg.repository,
         bugs: rootPkg.bugs,
         homepage: rootPkg.homepage,
+        publishConfig: rootPkg.publishConfig,
         dependencies: rootPkg.dependencies,
         engines: rootPkg.engines,
       };
