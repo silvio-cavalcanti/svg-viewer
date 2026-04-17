@@ -8,7 +8,7 @@ SVG Viewer CLI takes an SVG file, encodes it as a Base64 data URI, and opens it 
 
 ## Installation
 
-### Global Installation (Recommended)
+### Global Installation
 
 ```bash
 npm install -g @open-cicd/svg-viewer
@@ -30,7 +30,6 @@ Open any SVG file in your default browser:
 
 ```bash
 svg-viewer ./icon.svg
-npx @open-cicd/svg-viewer ./icon.svg
 ```
 
 That's it! Your browser will open with the SVG displayed.
@@ -60,15 +59,13 @@ svg-viewer <file> [options]
 
 ```bash
 svg-viewer ./logo.svg
-@open-cicd/svg-viewer ./assets/icons/home.svg
 ```
 
 ### Open in Specific Browser
 
 ```bash
 svg-viewer ./icon.svg --browser firefox
-@open-cicd/svg-viewer ./logo.svg -b chrome
-svg-viewer ./graphic.svg -b safari
+svg-viewer ./logo.svg -b chrome
 ```
 
 ### Save Data URI to File
@@ -77,7 +74,7 @@ Instead of opening the browser, save the Base64 string to a file:
 
 ```bash
 svg-viewer ./icon.svg --output ./icon-base64.txt
-@open-cicd/svg-viewer ./logo.svg -o ./output/data-uri.txt
+svg-viewer ./logo.svg -o ./output/data-uri.txt
 ```
 
 The output file will contain the complete data URI:
@@ -91,7 +88,7 @@ Suppress all console output:
 
 ```bash
 svg-viewer ./icon.svg --silent
-@open-cicd/svg-viewer ./logo.svg -s -o ./output.txt
+svg-viewer ./logo.svg -s -o ./output.txt
 ```
 
 ### Combine Options
@@ -102,8 +99,8 @@ Use multiple options together:
 # Open in Firefox without console output
 svg-viewer ./icon.svg -b firefox -s
 
-# Save to file with custom browser (browser option ignored when using -o)
-@open-cicd/svg-viewer ./icon.svg -o ./output.txt -b chrome
+# Save to file (browser option ignored when using -o)
+svg-viewer ./icon.svg -o ./output.txt -b chrome
 ```
 
 ## Output Format
@@ -168,4 +165,4 @@ MIT
 
 ## Support
 
-For issues, feature requests, or contributions, please visit the project repository.
+For issues, feature requests, or contributions, please visit the [project repository](https://github.com/silvio-cavalcanti/svg-viewer).
