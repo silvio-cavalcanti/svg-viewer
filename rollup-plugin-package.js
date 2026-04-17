@@ -24,7 +24,7 @@ export function packageOptimizer(options = {}) {
         name: rootPkg.name,
         version: rootPkg.version,
         description: rootPkg.description,
-        type: rootPkg.type,
+        type: "module",
         main: rootPkg.main || "./cli.js",
         bin: binField,
         author: rootPkg.author,
