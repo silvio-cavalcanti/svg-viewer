@@ -11,7 +11,7 @@ SVG Viewer CLI takes an SVG file, encodes it as a Base64 data URI, and opens it 
 ### Global Installation
 
 ```bash
-npm install -g @opencicd/svg-viewer
+npm install -g @open-cicd/svg-viewer
 ```
 
 After installation, the `svg-viewer` command is available globally.
@@ -21,7 +21,7 @@ After installation, the `svg-viewer` command is available globally.
 No installation required:
 
 ```bash
-npx @opencicd/svg-viewer ./icon.svg
+npx @open-cicd/svg-viewer ./icon.svg
 ```
 
 ## Quick Start
@@ -40,7 +40,7 @@ That's it! Your browser will open with the SVG displayed.
 
 ```bash
 svg-viewer <file> [options]
-@opencicd/svg-viewer <file> [options]
+@open-cicd/svg-viewer <file> [options]
 ```
 
 ### Options
