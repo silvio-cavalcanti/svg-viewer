@@ -18,17 +18,14 @@ export function packageOptimizer(options = {}) {
 
       const rootPkg = JSON.parse(readFileSync(rootPackageJson, "utf-8"));
 
-      const binField =
-        typeof rootPkg.bin === "string"
-          ? { "svg-viewer": rootPkg.bin }
-          : rootPkg.bin;
+      const binField = rootPkg.bin || { "svg-viewer": "./cli.js" };
 
       const optimizedPkg = {
         name: rootPkg.name,
         version: rootPkg.version,
         description: rootPkg.description,
         type: rootPkg.type,
-        main: "./cli.js",
+        main: rootPkg.main || "./cli.js",
         bin: binField,
         author: rootPkg.author,
         license: rootPkg.license,
