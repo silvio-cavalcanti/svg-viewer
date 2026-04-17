@@ -1,15 +1,8 @@
-import {
-  writeFileSync,
-  mkdirSync,
-  copyFileSync,
-  existsSync,
-  readFileSync,
-  chmodSync,
-} from "fs";
-import { resolve, dirname } from "path";
+import { writeFileSync, existsSync, readFileSync } from "fs";
+import { resolve } from "path";
 
 export function packageOptimizer(options = {}) {
-  const { binEntry = "bin/svg-viewer.js", outDir = "dist" } = options;
+  const { outDir = "dist" } = options;
 
   return {
     name: "package-optimizer",
@@ -31,7 +24,7 @@ export function packageOptimizer(options = {}) {
         description: rootPkg.description,
         type: rootPkg.type,
         main: "./cli.js",
-        bin: "svg-viewer ./bin/svg-viewer.js",
+        bin: "./cli.js",
         author: rootPkg.author,
         license: rootPkg.license,
         dependencies: rootPkg.dependencies,
@@ -45,23 +38,6 @@ export function packageOptimizer(options = {}) {
       );
 
       console.log("package-optimizer: Created optimized package.json");
-
-      if (existsSync(binEntry)) {
-        const destBin = resolve(outDir, "bin", "svg-viewer.js");
-        const destBinDir = dirname(destBin);
-
-        if (!existsSync(destBinDir)) {
-          mkdirSync(destBinDir, { recursive: true });
-        }
-
-        let binContent = readFileSync(binEntry, "utf-8");
-
-        binContent = binContent.replace("../dist/cli.js", "../cli.js");
-
-        writeFileSync(destBin, binContent, "utf-8");
-        chmodSync(destBin, 0o755);
-        console.log("package-optimizer: Copied bin/ to dist/bin/");
-      }
     },
   };
 }
