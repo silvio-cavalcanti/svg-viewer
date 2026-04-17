@@ -35,14 +35,14 @@
     "open": "10.1.0",
     "yargs": "17.7.2"
   },
-  "devDependencies": {
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-typescript": "^12.3.0",
+"devDependencies": {
+    "@rollup/plugin-json": "6.1.0",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "@rollup/plugin-typescript": "12.3.0",
     "@types/node": "20.14.0",
     "@types/yargs": "17.0.32",
-    "rollup": "^4.60.1",
-    "tslib": "^2.8.1",
+    "rollup": "4.60.1",
+    "tslib": "2.8.1",
     "tsx": "4.16.0",
     "typescript": "5.4.5"
   },
