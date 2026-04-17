@@ -27,6 +27,9 @@ export function packageOptimizer(options = {}) {
         bin: "./cli.js",
         author: rootPkg.author,
         license: rootPkg.license,
+        repository: rootPkg.repository,
+        bugs: rootPkg.bugs,
+        homepage: rootPkg.homepage,
         dependencies: rootPkg.dependencies,
         engines: rootPkg.engines,
       };
