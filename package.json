@@ -1,5 +1,5 @@
 {
-  "name": "@open-cicd/svg-viewer",
+  "name": "@opencicd/svg-viewer",
   "version": "1.0.0",
   "description": "CLI tool to convert SVG to Base64 and open in browser",
   "type": "module",
